@@ -1,0 +1,35 @@
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+header {
+    grid-area: "header";
+}
+
+main {
+    grid-area: "main";
+}
+
+footer {
+    grid-area: "footer";
+}
+
+nav {
+    display: grid;
+    grid-area: "nav";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+nav > ul > li {
+    list-style-type: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
