@@ -23,29 +23,33 @@ footer {
     grid-area: "footer";
 }
 
-nav > ul {
+nav ul {
     margin-top: 0;
     margin-bottom: 0;
-    height:4vh;
+    height:6vh;
     background-color: #F4743B;
     display: grid;
     grid-area: "nav";
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-nav > ul > li {
+nav li {
     list-style-type: none;
-    margin-top: 1vh;
+    margin-top: 1.5vh;
     margin-bottom: 1vh;
 }
 
-nav > ul > li > a {
+nav a {
+    display: block;
+    width: 12vw;
+    height: 3vh;
     text-decoration: none;
     color: #483C46;
 }
 
 li:nth-child(1) {
-    width:42vw;
+    padding-right: 28vw;
+    text-align: center;
 }
 
 li:nth-child(2) {
@@ -68,8 +72,8 @@ a:visited {
 
 }
 
-nav > ul > li > a:focus, nav > ul > li > a:hover {
-    font-size: larger;
+nav a:focus, nav a:hover {
+    background-color: #a34a24;
 }
 
 a:active {
@@ -86,3 +90,4 @@ main section:nth-child(1) {
     background-size: cover;
     background-position: center;
 }
+
