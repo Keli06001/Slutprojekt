@@ -40,44 +40,70 @@ nav li {
 }
 
 nav a {
-    display: block;
-    width: 12vw;
-    height: 3vh;
+    font-size: 24px;
     text-decoration: none;
-    color: #483C46;
+    color: #312e30;
+}
+
+@media (min-width: 600px){
+    nav a {
+        display: block;
+        width: 12vw;
+        height: 3vh;
+        font-size: 17px;
+        text-decoration: none;
+    }
+
+    a:link {
+        font-size: inherit;
+    }
+    
+    a:visited {
+        font-size: inherit;
+    }
+    
+    nav a:focus, nav a:hover {
+        background-color: #bd5a2f;
+    }
+    
+    a:active {
+        font-size: inherit;
+    }
+
+    li:nth-child(1) {
+        padding-right: 28vw;
+        text-align: center;
+    }
+    
+    li:nth-child(2) {
+        padding-top: 1.5vh;
+        text-align: center;
+    }
+    
+    li:nth-child(3) {
+        padding-top: 1.5vh;
+        text-align: center;
+    }
 }
 
 li:nth-child(1) {
-    padding-right: 28vw;
+    padding-right: 26vw;
     text-align: center;
 }
 
 li:nth-child(2) {
+    padding-right: 18px;
+    margin-top: 0;
     text-align: center;
 }
 
 li:nth-child(3) {
+    margin-top: 0;
     text-align: center;
 }
 
 h1 {
     display: none;
-}
-
-a:link {
-
-}
-
-a:visited {
-
-}
-
-nav a:focus, nav a:hover {
-    background-color: #a34a24;
-}
-
-a:active {
-
 }
 
 .ovanlig, .vanlig, .home {
@@ -90,4 +116,16 @@ main section:nth-child(1) {
     background-size: cover;
     background-position: center;
 }
+main section:nth-child(2) {
+    margin-top: 12px;
+    height: 38vh;
+    width: 45vw;
+    background-image: url(https://media.licdn.com/dms/image/D4E12AQFppEpF_DF-lQ/article-cover_image-shrink_720_1280/0/1690977883416?e=2147483647&v=beta&t=_hhcod3b3MEarHDuuOolUX96zS80OOpg-_32k2a6Rl4);
+    background-size: cover;
+    background-position: center;
+}
 
+h2 {
+    text-align: right;
+    width: 44vw;
+}
