@@ -45,7 +45,73 @@ nav a {
     color: #312e30;
 }
 
+li:nth-child(1) {
+    padding-right: 26vw;
+    text-align: center;
+}
+
+li:nth-child(2) {
+    padding-right: 18px;
+    margin-top: 0;
+    text-align: center;
+}
+
+li:nth-child(3) {
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    display: none;
+}
+
+.ovanlig, .vanlig, .home {
+    color:white;
+}
+
+main section:nth-child(1) {
+    height: 40vh;
+    background-image: url(https://st4.depositphotos.com/1005563/19666/i/450/depositphotos_196668956-stock-photo-balls-sport-trophy-championship-concept.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+main > section:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 17px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+main > section:nth-child(2) h2 {
+    width: 100%;
+    margin: 0;
+}
+
+main > section:nth-child(2) > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section:nth-child(2) img {
+    width: 70%;
+}
+
+h2 {
+    padding-left: 4vw;
+    width: 44vw;
+}
+
 @media (min-width: 600px){
+    body {
+        width: 97vw;
+    }
     nav a {
         display: block;
         width: 12vw;
@@ -84,48 +150,12 @@ nav a {
         padding-top: 1.5vh;
         text-align: center;
     }
-}
 
-li:nth-child(1) {
-    padding-right: 26vw;
-    text-align: center;
-}
+    main > section:nth-child(2) {
+        flex-direction: row;
+    }
 
-li:nth-child(2) {
-    padding-right: 18px;
-    margin-top: 0;
-    text-align: center;
-}
-
-li:nth-child(3) {
-    margin-top: 0;
-    text-align: center;
-}
-
-h1 {
-    display: none;
-}
-
-.ovanlig, .vanlig, .home {
-    color:white;
-}
-
-main section:nth-child(1) {
-    height: 40vh;
-    background-image: url(https://st4.depositphotos.com/1005563/19666/i/450/depositphotos_196668956-stock-photo-balls-sport-trophy-championship-concept.jpg);
-    background-size: cover;
-    background-position: center;
-}
-main section:nth-child(2) {
-    margin-top: 12px;
-    height: 38vh;
-    width: 45vw;
-    background-image: url(https://media.licdn.com/dms/image/D4E12AQFppEpF_DF-lQ/article-cover_image-shrink_720_1280/0/1690977883416?e=2147483647&v=beta&t=_hhcod3b3MEarHDuuOolUX96zS80OOpg-_32k2a6Rl4);
-    background-size: cover;
-    background-position: center;
-}
-
-h2 {
-    text-align: right;
-    width: 44vw;
+    main section:nth-child(2) img {
+        width: 30%;
+    }
 }
