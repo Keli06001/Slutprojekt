@@ -162,37 +162,88 @@ h1 {
     margin: 0;
 }
 
-#vanliga h2 {
+#vanliga h2, 
+#ovanliga h2 {
+    margin: 0;
+    text-align: center;
+    background-color: #008389;
+}
+
+#vanliga main p, 
+#ovanliga main p {
+    margin: 2px;
     text-align: center;
 }
 
-#vanliga main section {
+#vanliga main section, 
+#ovanliga main section {
     height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 15px;
+    font-size: 24px;
 }
 
-#vanliga main section p {
-    padding-left: 12px;
+#vanliga main section h3,
+#vanliga main section h4,
+#vanliga main section h5,
+#ovanliga main section h3,
+#ovanliga main section h4,
+#ovanliga main section h5,
+#ovanliga main section h6 {
+    font-size: 25px;
+    margin-top: 28px;
+    margin-bottom: 3px;
 }
 
 #vanliga main section:nth-child(2) {
-    background-color: #3e5a2c ;
+    background-color: hsl(61, 87%, 49%);
+}
+
+#ovanliga main section:nth-child(2) {
+    background-color: #4c505b;
 }
 
 #vanliga main section:nth-child(3) {
     background-color: #9eb565;
+}
 
+#ovanliga main section:nth-child(3) {
+    background-color: #c2222a;
 }
 
 #vanliga main section:nth-child(4) {
     background-color: #f5f6fa;
 }
 
-#vanliga main section img {
+#ovanliga main section:nth-child(4) {
+    background-color: #8f857a;
+}
+
+#ovanliga main section:nth-child(5) {
+    background-color: hsl(58.15deg 98.78% 67.84%);
+}
+
+#vanliga main section img,
+#ovanliga main section img {
     padding-top: 12px;
+    width: 80%;
+}
+
+#fotboll main h2 {
+    text-align: center;
+}
+
+#fotboll main p {
+    margin-top: 0;
+    padding-left: 5px;
+    font-size: 25px;
+}
+
+#fotboll main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 80%;
 }
 
