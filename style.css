@@ -80,7 +80,7 @@ h1 {
 
 #index main section:nth-child(1) {
     height: 40vh;
-    background-image: url(https://st4.depositphotos.com/1005563/19666/i/450/depositphotos_196668956-stock-photo-balls-sport-trophy-championship-concept.jpg);
+    background-image: url(/src/sport.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -250,18 +250,18 @@ h1 {
 @media (min-width: 600px){
     nav a {
         display: block;
-        width: 12vw;
+        width: auto;
         height: 3vh;
-        font-size: 17px;
+        font-size: 3.3vh;
         text-decoration: none;
     }
 
     a:link {
-        font-size: inherit;
+        text-decoration: inherit;
     }
     
     a:visited {
-        font-size: inherit;
+        text-decoration: inherit;
     }
     
     nav a:focus, nav a:hover {
@@ -272,22 +272,26 @@ h1 {
         font-size: inherit;
     }
 
-    nav > li:nth-child(1) {
+    #index main section:nth-child(1) {
+        background-image: url()
+    }
+
+    nav li:nth-child(1) {
         padding-right: 28vw;
         text-align: center;
     }
     
-    nav > li:nth-child(2) {
-        padding-top: 1.5vh;
+    nav li:nth-child(2) {
+        margin-top: 1.5vh;
         text-align: center;
     }
     
-    nav > li:nth-child(3) {
-        padding-top: 1.5vh;
+    nav li:nth-child(3) {
+        margin-top: 1.5vh;
         text-align: center;
     }
 
-    #index > section:nth-child(2) {
+    #index main > section:nth-child(2) {
         flex-direction: row;
     }
 
@@ -295,11 +299,11 @@ h1 {
         width: 30%;
     }
 
-    #index > section:nth-child(3) {
-        flex-direction: row;
+    #index main > section:nth-child(3) {
+        flex-direction: row-reverse;
     }
 
-    #index section:nth-child(3) img {
-        width: 30%;
+    #index main section:nth-child(3) img {
+        width: 60%;
     }
 }
