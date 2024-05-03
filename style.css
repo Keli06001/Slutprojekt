@@ -194,7 +194,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: auto;
     background-color: #afafaf;
     padding: 20px;
     margin: auto;
@@ -210,7 +210,7 @@ button {
 
 #index main section:nth-child(4) li {
     margin-top: 12px;
-    width: 12px;
+    font-size: 25px;
 }
 
 #index main section:nth-child(2) img {
