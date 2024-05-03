@@ -9,7 +9,7 @@
 <body id="index">
     <div class="wrapper">
     <header>
-        <h1></h1>
+        <h1>Sport</h1>
         <nav>
             <ul>
                 <li><a class="home" href="index.html">Home</a></li>
@@ -45,6 +45,37 @@
                 <li>Tennis</li>
             </ol>
         </section>
+
+        <section>
+            <form action="" method="post">
+                <label for="username">Användarnamn:</label>
+                <input type="text" id="username" name="username" placeholder="Ange användarnamn" pattern="[a-öA-Ö0-9]+" required>
+                
+                <label for="password">Lösenord:</label>
+                <input type="password" id="password" name="password" placeholder="Ange lösenord" required>
+                
+                <label for="age">Ålder:</label>
+                <input type="number" id="age" name="age" placeholder="Ange din ålder" min="18" max="120" required>
+                
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+                
+                <label for="city">Stad:</label>
+                <input type="text" id="city" name="city" list="cities" placeholder="Ange din stad">
+                <datalist id="cities">
+                    <option value="Stockholm">
+                    <option value="Göteborg">
+                    <option value="Malmö">
+                    <option value="Uppsala">
+                    <option value="Linköping">
+                    <option value="Växjö">
+                    <option value="Hovmantorp">
+                    <option value="Borås">
+                </datalist>
+
+                <button type="submit">Skicka</button>
+            </form>     
+        </section>  
     </main>
     <footer>
         <p>Källor: </p>
