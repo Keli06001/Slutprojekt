@@ -8,7 +8,7 @@
 </head>
 <body id="index">
     <div class="wrapper">
-    <header>
+    <header id="topp">
         <h1>Sport</h1>
         <nav>
             <ul>
@@ -31,14 +31,16 @@
         <section>
             <img src="src/Kevinsport.png" alt="why">
             <section>
-                <h3>Fördelar Med Att Sporta</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <article>
+                    <h3>Fördelar Med Att Sporta</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </article>
             </section>
         </section>
 
         <section>
             <h4>Poluläraste sporterna</h4>
-            <ol>
+            <ol start="2">
                 <li>Fotboll</li>
                 <li>Cricket</li>
                 <li>Hockey</li>
@@ -74,8 +76,23 @@
                 </datalist>
                 <br><br>
 
+                <label for="numbers">Välj ett nummer:</label>
+                <select name="numbers" id="numbers">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10" selected>10</option>
+                </select>
+                <br><br>
+
                 <fieldset>
-                    <legend>Choose your preferences:</legend>
+                    <legend>Välj dina preferenser:</legend>
                     <input type="checkbox" id="checkbox1" name="checkbox1">
                     <label for="checkbox1">Option 1</label><br>
                     
@@ -87,17 +104,23 @@
                 </fieldset>
             
                 <fieldset>
-                    <legend>Choose an option:</legend>
+                    <legend>Välj ett alternativ:</legend>
 
-                    <label for="radio1">Option 1</label>
-                    <input type="radio" id="radio1" name="radio" value="option1">
+                    <section>
+                        <label for="radio1">Option 1</label>
+                        <input type="radio" id="radio1" name="radio" value="option1" checked>
+                    </section>
                     
+                    <section>
+                        <label for="radio2">Option 2</label>
+                        <input type="radio" id="radio2" name="radio" value="option2">
+                    </section>
                     
-                    <label for="radio2">Option 2</label>
-                    <input type="radio" id="radio2" name="radio" value="option2">
-                    
-                    <label for="radio3">Option 3</label>
-                    <input type="radio" id="radio3" name="radio" value="option3">
+                    <section>
+                        <label for="radio3">Option 3</label>
+                        <input type="radio" id="radio3" name="radio" value="option3">
+                    </section>
+
                 </fieldset>
             
                 <label for="message">Text:</label>
@@ -108,6 +131,8 @@
                 <button type="submit">Skicka</button>
             </form>     
         </section>  
+
+        <a href="#topp">Gå till toppen ↑</a>
     </main>
     <footer>
         <p>Källor: </p>
