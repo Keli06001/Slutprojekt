@@ -145,7 +145,7 @@ input {
 }
 
 #index button {
-    width: 300px;
+    width: 45ch;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -246,7 +246,7 @@ header + nav:hover section, header + nav:focus-within section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 17px;
+    font-size: 1.5rem;
     padding: 20px;
     background-color: rgb(220, 195, 141);
 }
@@ -258,7 +258,7 @@ header + nav:hover section, header + nav:focus-within section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 17px;
+    font-size: 1.5rem;
     padding: 20px;
     background-color: rgb(162, 228, 227);
 }
@@ -329,7 +329,7 @@ header + nav:hover section, header + nav:focus-within section {
 #vanliga h1, 
 #ovanliga h2 {
     margin: 0;
-    font-size: 25px;
+    font-size: 4ex;
     text-align: center;
     background-color: turquoise;
 }
@@ -436,9 +436,13 @@ iframe {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2px;
     margin-bottom: 2px;
     text-decoration: none;
+}
+
+#index main a:nth-child(6)::before {
+    content: '↑';
+    font-size: 72px;
 }
 
 #topp:target {
