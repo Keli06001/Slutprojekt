@@ -1,26 +1,25 @@
-<!DOCTYPE html>
-<html lang="sv">
+<!DOCTYPE html> <!--Anger att jag använder HTML5-->
+<html lang="sv"> <!--Visar att min sida är på svenska, underlättar för sökmotoroptemering och textuppäsare-->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sport</title>
-     <!-- Länkar till Google Fonts för typsnittet "Sedan SC" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<head> <!--Länkar allt som man behöver till sidan-->
+    <meta charset="UTF-8"> <!--Anger teckenupsättningen för dokumentet-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Anger visningsinstälningarna för olika enheter-->
+    <title>Sport</title> <!--Titeln på webbsidan som visas i webbläsarens flik-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Länkar till Google Fonts för typsnittet "Sedan SC" -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Gör att länken laddar snabbare-->
     <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet"> <!--Länkar till extern CSS-fil-->
 </head>
 
-<body id="index">
-    <div class="wrapper">
+<body id="index"> <!--Här börjar body, mina body's har olika id's för att jag ska kunna ge alla en unik design-->
+    <div class="wrapper"> <!--Min wrapper använder jag för att gruppera och omfamna innehållet på webbsidan-->
 
-    <header role="banner">
-        <h1>Sport</h1>
+    <header role="banner"> <!--Här är min header, vilket innehåller min globala meny och min huvud rubrik för att hjälpa till med sökningsreslutat, jag har role banner för att definera en ARIA Landmark-->
+        <h1>Sport</h1> <!--Min huvudrubrik-->
 
-        <nav role="navigation">
-            <ul id="topp">
-                <li><a class="home" href="index.html">Home</a></li>
+        <nav role="navigation"> <!--Mitt navigationsfällt-->
+            <ul id="topp"> <!--Har en id för att kunna åka till denna delen av sidan och ändra utseendet av den med ett knapptryck nästan längst ner på sidan-->
+                <li><a class="home" href="index.html">Home</a></li> <!--Mina länkar i en lista, sättit klasser för att ändra färg på texten på sidan som man befinner sig på-->
                 <li><a href="html/vanliga.html">Vanliga Sporter</a></li>
                 <li><a href="html/ovanliga.html">Ovanliga Sporter</a></li>
             </ul>
@@ -28,22 +27,22 @@
 
     </header>
 
-    <main role="main">
+    <main role="main"> <!--Har role main som definerar en ARIA Landmark, ARIA landmark gör bland annat det lättare för personer med funktionsnersättningar att använda sidan med underlättat skärmläsar tydlighet, main innehåller störta delen av mitt inehåll på sidan-->
 
-        <section></section>
+        <section></section> <!--En tom section som jag använder för att skapa en backgroundsbild i CSS-->
 
-        <section>
-            <img src="src/historia.jpg" alt="test">
+        <section> <!--En section med bild, rubrik och tect. Används för att sortera och göra det lättare att flytta på objekten inom som om de vore en, underlättar när de hänger ihop-->
+            <img src="src/historia.jpg" alt="Sportens Historia"> <!--Här har jag bild som jag länkat till min src map där jag har mina bilder-->
             <section>
-                <h2>Sportens Historia</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <h2>Sportens Historia</h2> <!--Här har jag en rubrik för min p under-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> <!--Här har jag en p, här skriver jag min text-->
             </section>
         </section>
 
-        <section>
-            <img src="src/kevinsport.png" alt="why">
+        <section> <!--En till section med bild, rubrik och text-->
+            <img src="src/kevinsport.png" alt="Fördelar Med Sport"> <!--Har en alt för att visa vad bilden visar ifall den inte laddar in-->
             <section>
-                <article>
+                <article> <!--Här har jag en article, jag använder den för att koppla ihop min rubrik och text-->
                     <h3>Fördelar Med Att Sporta</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 </article>
@@ -52,8 +51,8 @@
 
         <section>
             <h4>Poluläraste sporterna</h4>
-            <ol start="2">
-                <li>Fotboll</li>
+            <ol start="2"> <!--Min ordnade lista, en numrerad lista som startar på 2-->
+                <li>Fotboll</li> <!--Mina rader med innehåll i listan-->
                 <li>Cricket</li>
                 <li>Hockey</li>
                 <li>Tennis</li>
@@ -61,35 +60,35 @@
         </section>
 
         <section>
-            <form action="index.html" method="post">
-                <label for="username">Användarnamn:</label>
-                <input type="text" id="username" name="username" placeholder="Ange användarnamn" pattern="[a-öA-Ö0-9]+" required>
+            <form action="index.html" method="post"> <!--Här är mitt formulär, här har jag en action vilket är vart man hamnar efter man tryckt på submit, använder metod post vilket skickar informationen genom bodyn separat medans get (den andra metoden) skickar det genom URL:en-->
+                <label for="username">Användarnamn:</label> <!--Kopplad till min input och visar texten Användarnamn:-->
+                <input type="text" id="username" name="username" placeholder="Ange användarnamn" pattern="[a-öA-Ö0-9]+" required> <!--En input med typ text som har id och name username vilket gör att jag kan länka label till den, har även en placeholder vilket visar text medans användaren inte matat in något i rutan. Har också en pattern vilket definerar vad som användaren får mata in, användaren får inte mata in tecken utanför dessa, har också en required vilket gör att jag inte kan klicka submit utan att fylla i den -->
                 
                 <label for="password">Lösenord:</label>
-                <input type="password" id="password" name="password" placeholder="Ange lösenord" required>
+                <input type="password" id="password" name="password" placeholder="Ange lösenord" required> <!--Typ lösernord, gör texten till svarta prickar istället för att vissa användarens inputs för att ge användaren privicy med sitt lösernord-->
                 
                 <label for="age">Ålder:</label>
-                <input type="number" id="age" name="age" placeholder="Ange din ålder" min="18" max="120" required>
+                <input type="number" id="age" name="age" placeholder="Ange din ålder" min="18" max="120" required> <!--Number, får välja nummer mellan 18 och 120-->
                 
                 <label for="email">E-post:</label>
-                <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required>
+                <input type="email" id="email" name="email" placeholder="Ange din e-postadress" required> <!--Email, den kan märka ifall de användaren skrivit liknar en email eller om den bara skrivit något annat, det räknas inte ifall användaren inte matat in något som datorn tror är en email-->
                 
                 <label for="city">Stad:</label>
-                <input type="text" id="city" name="city" list="cities" placeholder="Ange din stad">
-                <datalist id="cities">
-                    <option value="Stockholm">
-                    <option value="Göteborg">
-                    <option value="Malmö">
+                <input type="text" id="city" name="city" list="cities" placeholder="Ange din stad"> <!--Gjort en lista med alternativ som användaren kan välja mellan-->
+                <datalist id="cities"> <!--En lista med val som användaren kan välja mellan-->
+                    <option value="Stockholm"> <!--val 1-->
+                    <option value="Göteborg"> <!--val 2-->
+                    <option value="Malmö"> <!--val 3-->
                     <option value="Uppsala">
                     <option value="Linköping">
                     <option value="Växjö">
                     <option value="Hovmantorp">
                     <option value="Borås">
                 </datalist>
-                <br><br>
+                <br><br> <!--Breakrow, ger mellanrum mellan denna och nästa element-->
 
                 <label for="numbers">Välj ett nummer:</label>
-                <select name="numbers" id="numbers">
+                <select name="numbers" id="numbers"> <!--lik förra fast lite anorlunda-->
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -99,13 +98,13 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
-                    <option value="10" selected>10</option>
+                    <option value="10" selected>10</option> <!--Gör att 10 är vald i början som en standard-->
                 </select>
                 <br><br>
 
-                <fieldset>
-                    <legend>Välj dina preferenser:</legend>
-                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                <fieldset> <!--Fieldset är lite som section fast för formulär. Använder det för att grupera element av samma typ-->
+                    <legend>Välj dina preferenser:</legend> <!--Ger namn till fieldsetet-->
+                    <input type="checkbox" id="checkbox1" name="checkbox1"> <!--Checkbox är en typ av input och är boxar som man kan välja om man vill kryssa i eller inte-->
                     <label for="checkbox1">Option 1</label><br>
                     
                     <input type="checkbox" id="checkbox2" name="checkbox2">
@@ -120,7 +119,7 @@
 
                     <section>
                         <label for="radio1">Option 1</label>
-                        <input type="radio" id="radio1" name="radio" value="option1" checked>
+                        <input type="radio" id="radio1" name="radio" value="option1" checked> <!--Radio är lite lik checkbox fast du kan bara välja en istället för hur många du vill. Denna är också checked vilket betyder att den kommer vara i checkad i början innan användaren har klickat i något-->
                     </section>
                     
                     <section>
@@ -136,20 +135,20 @@
                 </fieldset>
             
                 <label for="message">Text:</label>
-                <textarea id="message" name="message" rows="4" cols="50"></textarea>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea> <!--Här har jag en textarea som är en ruta som användaren kan skriva i och skicka in vad den skrivit, användaren kan skriva in 4 rows och 50 cols-->
                 <br><br>
             
 
-                <button type="submit">Skicka</button>
+                <button type="submit">Skicka</button> <!--En knapp för att skicka in användarens inmatning och skicka användaren till action sidan-->
             </form>     
         </section>  
 
-        <a href="#topp">Gå till toppen</a>
+        <a href="#topp">Gå till toppen</a> <!--En klickbar yta för att skicka användaren till toppen av sidan-->
     </main>
 
-    <footer role="contentinfo">
+    <footer role="contentinfo"> <!--Botten av min sida där jag har källor, där brukar man även ha kontaktinfo och liknande-->
         <section>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none"> <!--En svg-fil vilket är en grafisk bild vilket innebär att de kan förstoras eller förminskas utan att förlora bildkvalitet-->
                 <path d="M4 14.7519C3.37037 13.8768 3 12.8059 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 13.5693 20.6254 14.5541 20 15.3275M12.5 12.9995L10.5 21.0008M8.5 11.9995L6.5 20.0008M16.5 12L14.5 20.0013" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </section>
