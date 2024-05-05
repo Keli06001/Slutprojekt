@@ -60,19 +60,17 @@ nav a {
 
 header > nav li:nth-child(1) { /*Mitt första li element i nav som ligger direkt i header*/
     padding-right: 25.5vw; /*Sätter ett avstånd till höger med 25,5 viewport width, vilket motsvarar 25,5% av enhetens bredd*/
-    text-align: center;
     margin-top: auto; /*Gör att mitt avstånd över ändras aoutomatiskt*/
     margin-bottom: auto; /*Gör samma sak fast under, använder detta för att centrera mitt objekt i höjden utan att påvärka sidorna*/
 }
 
 header > nav li:nth-child(2) { /*Ändrar andra li elementet i nav som ligger direkt i header*/
-    padding-right: 26px;
+    padding-right: 26px; /*Lägger till en padding åt höger för att ge mer avstånd mellan knapparna*/
     margin: auto; /*Centrerar li elementet på alla håll*/
 }
 
 header > nav li:nth-child(3) {
     margin: auto;
-    text-align: center;
 }
 
 h1 { /*Stylar alla h1*/
@@ -171,68 +169,69 @@ input[type="checkbox"] { /*Ändrar alla inputs som är typen checkbox*/
     display: none; /*Tar bort orginal checkboxen, detta gör jag för att skappa min egna checkbox*/
 }
 
-input[type="checkbox"] + label { /*Skapar min egna checkbox*/
-    display: inline-block; 
-    vertical-align: middle;
-    position: relative;
+input[type="checkbox"] + label { /*Ändrar för min Label som är ett direkt efterföljande syskon till checkbox*/
+    vertical-align: middle; /*Ändrar vertikala positionionen så det blir lite mer avständ och lite finare*/
+    position: relative; /*Gör positionen relativ, i detta fallet gör den så mina rutor visas bredvid min checkbox, utan detta skulle de vara på sin defult position vilket är högst upp åt vänster*/
     padding-left: 30px;
     cursor: pointer;
 }
 
-input[type="checkbox"] + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
+input[type="checkbox"] + label:before { /*Väljer positionen innan label*/
+    content: ''; /*Lägger till en tom ruta innan label som jag kan avända för att skapa en box*/
+    position: absolute; /*Fixar min position så att jag får rutan där jag vill ha den*/
+    left: 0; /* Bestämmer left hur många pixlar elementet ska flyttas från vänsterkanten av dess närmaste positionerade förälder, denna funktion funkar tillsammans med position absolute*/
+    top: 0; /*Som sak som förra fast toppen i stället för vänster*/
     width: 20px; 
     height: 20px; 
-    border: 2px solid #ccc;
+    border: 2px solid #ccc; /*Skapar en 2px tjock ram som är vit*/
     background-color: #fff;
 }
 
-input[type="checkbox"]:checked + label:before {
+input[type="checkbox"]:checked + label:before { /*Ändrar färgen på backgrunden innan label när den är checkad*/
     background-color: hsla(207, 90%, 54%, 1); 
 }
 
-input[type="checkbox"] + label:after {
-    content: '\2713'; 
+input[type="checkbox"] + label:after { /*Skapar en vit check för att göra checkad checkbox snyggare*/
+    content: '\2713'; /*Detta skapar en check*/
     position: absolute;
     left: 4px; 
     top: 1px;
     font-size: 16px; 
-    color: #fff; 
+    color: #fff; /*Jag behöver inte göra så att den kommer efter lådan är checked eftersom den är samma färg som backgrunden är innan man checkat den så tills att man klickar på boxen så är checken osynlig*/
 }
 
-input[type=radio] {
+input[type=radio] { /*Gör radioknapparna mindre*/
     margin: auto;
 }
 
 #numbers {
-    width: 20em;
+    width: 20em; /*1 em är storleken som fonten på den delen har, detta används för att skapa layouter som är proportoneliga mot textens storlek*/
 }
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-header ~ nav {
+/*-----------------------------------------------Localmeny-----------------------------------------------*/
+
+header ~ nav { /*Väljer alla nav som är syskon till header*/
     grid-area: nav;
     height: 100%;
-    min-height: 30px;
+    min-height: 30px; /*Sätter en minimum höjd på 30 pixlar*/
     position: relative;
 } 
 
-header + nav section {
+header + nav section { 
     position: absolute;
-    height: min-content;
+    height: min-content; /*Min content sätter höjden på ett element till det minsta möjliga värdet som tillåter att allt innehåll inuti elementet visas utan att behöva skrolla*/
     width: 100%;
     top: 100%;
-    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5); 
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5); /*Sättter en skugga runt elementet*/
+    opacity: 0; /*gör elementet osynligt för att sedan kunna animera elementet till synligt*/
+    pointer-events: none; /*Elementet kommer inte att fånga eller svara på några pekarevenemang, vilket gör att händelserna (faller igenom) till element under det*/
+    transform: translateY(-10px); /*Skapar en animation, gör att elementet flyttas uppåt*/
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out; /*Gör en mjuk övergång mellan de två olika tillstånden*/
 } 
 
-header + nav:hover section, header + nav:focus-within section {
+header + nav:hover section, header + nav:focus-within section { /**/
     opacity: 1;
     height: 23vh;
     background-color: rgba(194, 97, 56, 0.877);
@@ -240,10 +239,12 @@ header + nav:hover section, header + nav:focus-within section {
     pointer-events: auto;
 } 
 
-#ovanliga button {
+#ovanliga button { /*Gör så att knappen täcker hela navbaren*/
     width: 100%;
     height: 100%;
 }
+
+/*--------------------------------------------------------------------------------------------------------*/
 
 #index main section:nth-child(1) {
     height: 40vh;
@@ -411,6 +412,7 @@ header + nav:hover section, header + nav:focus-within section {
 }
 
 #vanliga video {
+    width: 98vw;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -474,7 +476,7 @@ iframe {
     src: url(/fonts/font.ttf); /*Länkar fonten*/
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) { /*Media queries, gör så att vissa saker ändras när skärmupplösningens bredd passerar 600px*/
     nav a {
         display: block;
         border-radius: 4px;
@@ -540,6 +542,11 @@ iframe {
 
     #index main section:nth-child(3) img {
         width: 60%;
+    }
+
+    fieldset > section { /*Sätter en flex på mina radioknappar för att göra så att de är centrerade och parralella med varandra*/
+        display: flex;
+        flex-direction: row;
     }
 
     #vanliga .trespalt {
