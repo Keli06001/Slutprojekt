@@ -1,75 +1,73 @@
-.wrapper {
-    display: grid;
-    grid-template-areas: 
+.wrapper {  /*En klass på en div som jag använder för att sätta en grid på hela sidan*/
+    display: grid; /*Skapar en grid*/
+    grid-template-areas: /*Säger vilka delar som ska vara med i griden och vilken ording de är*/
         "header"
         "nav"
         "main"
         "footer";
+} /*Sluttag, visar att här slutar redigeringen av wrapper*/
+
+body { /*Ändrar body på sidan, jag använder det för att nollställa min margin för min body eftersom den har en defult margin på 8px*/
+    margin: 0; /*Sätter margin till 0, gör att bodin inte har något oönskat avstånd ifrån något*/
 }
 
-body {
-    margin: 0;
-    padding: 0;
+header { /*Ändrar header*/
+    grid-area: header; /*Berättar för min wrapper att demna delen ska vara min grid area header som jag sagt ska vara min min grid*/
 }
 
-header {
-    grid-area: header;
+main { /*Ändrar main*/
+    grid-area: main; /*Detta är main i wrapperns grid*/
 }
 
-main {
-    grid-area: main;
-}
-
-footer {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4e4e4e;
-    background-color: rgb(240, 240, 240);
+footer { 
+    text-align: center; /*Gör så att all text och lite annat i min footer centreras*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Definerar vilket typsnitt jag ska avända i min footer*/
+    color: #4e4e4e; /*Ändrar min textfärg*/
+    background-color: rgb(240, 240, 240); /*Ändrar min backgrundsfärg*/
     grid-area: footer;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid; /*Skapar en grid i footer*/
+    grid-template-columns: 1fr 1fr 1fr; /*Skapar 3 horizontella rutor och alla har samma storlek (1fr)*/
 }
 
-footer a {
-    text-decoration: none;
+footer a { /*Startar området där jag kan redigera alla a i min footer, a skapar hyperlänkar till andra dokument, sidor, filer eller annat*/
+    text-decoration: none; /*Tar bort textens decoration, detta använde jag för att ta bort understräcket under länken*/
 }
 
-footer p {
-    margin-bottom: 2px;
+footer p { /*Ändrar alla p element i min footer, p är min huvudtext*/
+    margin-bottom: 2px; /*skapar ett avstånd på 2px under min text*/
 }
 
-header > nav ul {
-    font-family: minfont;
-    height: fit-content;
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #F4743B;
+header > nav ul { /*Redigerar för oordnade listor (ul) som är i navigationsmenyn (nav) direkt inom sidhuvudet (header)*/
+    font-family: minfont; /*Använder fontent minfont som jag har laddat ner från google fonts*/
+    height: fit-content; /*Sätter höjden så att den anpassar sig för att få plats med allt inehåll, i detta fall allting i min navigationsmeny (nav)*/
+    margin-top: 0; /*Gör att navigationsmenyn nuddar toppen av sidan genom att ta bort defult mellanrum*/
+    margin-bottom: 0; /*Gör så att navigationsmenyn nuddar toppen av bodyn genom att ta bort defult mellanrum*/
+    background-color: #F4743B; 
     display: grid;
     grid-area: nav;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; /*Delar upp min grid till 4 horizontella delar vart alla är storleken 1fr (fraktion) så alltså 4 lika stora delar*/
 }
 
-nav li {
-    list-style-type: none;
+nav li { /*Mina listor i min nav*/
+    list-style-type: none; /*Tar bort styling för lista, prickar*/
 }
 
 nav a {
-    font-size: 24px;
+    font-size: 24px; /*Sätter storleken på alla a i nav till 24 pixlar*/
     text-decoration: none;
     color: #312e30;
 }
 
-header > nav li:nth-child(1) {
-    padding-right: 25.5vw;
+header > nav li:nth-child(1) { /*Mitt första li element i nav som ligger direkt i header*/
+    padding-right: 25.5vw; /*Sätter ett avstånd till höger med 25,5 viewport width, vilket motsvarar 25,5% av enhetens bredd*/
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin-top: auto; /*Gör att mitt avstånd över ändras aoutomatiskt*/
+    margin-bottom: auto; /*Gör samma sak fast under, använder detta för att centrera mitt objekt i höjden utan att påvärka sidorna*/
 }
 
-header > nav li:nth-child(2) {
+header > nav li:nth-child(2) { /*Ändrar andra li elementet i nav som ligger direkt i header*/
     padding-right: 26px;
-    margin: auto;
-    text-align: center;
+    margin: auto; /*Centrerar li elementet på alla håll*/
 }
 
 header > nav li:nth-child(3) {
@@ -77,92 +75,104 @@ header > nav li:nth-child(3) {
     text-align: center;
 }
 
-h1 {
-    display: none;
+h1 { /*Stylar alla h1*/
+    display: none; /*Gör så att min h1 inte visas*/
 }
 
-img {
-    border-radius: 20px;
+img { /*Stylar alla img*/
+    border-radius: 20px; /*Rundar hörnen på alla mina img med en radius på 20 pixlar*/
 }
 
-.ovanlig, .vanlig, .home {
+.ovanlig, .vanlig, .home { /*Ändrar färg på de valda klasserna, detta använde jag för att byta färg på navigations sidans text som man är på*/
     color:white;
 }
 
-.sport table {
-    margin-left: auto;
-    margin-right: auto;
+.sport table { /*Min tabell inom klassen sport*/
+    margin-left: auto; /*Margin auto åt vänster*/
+    margin-right: auto; /*Margin auto åt höger, centrerar table åt vänster höger utan att påvärka upp och ner*/
     margin-bottom: 12px;
-    width: 90%;
-    border: solid black;
-    border-collapse: collapse;
+    width: 90%; /*Ändrar bredden till 90% av hela sidan bredd*/
+    border: solid black; /*Skapar en ram runt som är svart*/
+    border-collapse: collapse; /*Gränserna kollapsar ihop till en enda gräns mellan cellerna. Detta gör tabellen renare*/
 }
 
-.sport th, td {
-    text-align: left;
+.sport th, 
+.sport td { /*Stylar för th inom klassen sport och td inom klassen sport*/
+    text-align: left; /*Gör att texten centreras åt vänster*/
     font-size: 30px;
 }
 
-.sport tr:nth-child(even) {
-    background-color: #135f69;
+.sport tr:nth-child(even) { /*Ändrar alla jämna tr inom sport. Det finns en 1 en 2 och så vidare tills så många jag har, alltså ändrar den alla med jämna nummer som 2,4 och så*/
+    background-color: #135f69; /*Ger mig zebra striping*/
 }
 
-.sport caption {
+.sport caption { /*Väljer min caption inom sport*/
     font-size: 30px;
     margin-bottom: 2px;
 }
 
-.sport dl {
+.sport dl { /*Min definition list i sport*/
     background-color: #2196F3;
-    width: fit-content;
-    border-radius: 12px;
+    width: fit-content; /*Ändrar breden för att få plats med allt inehåll*/
+    border-radius: 12px; /*Rundar hörnen med en cirkel radie på 12 pixlar*/
     margin-left: auto;
     margin-right: auto;
 }
 
-form {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-figure {
+figure { 
     margin: 0;
 }
 
-input:invalid {
-    border-color: red;
+/*------------------------------------------------Formulär------------------------------------------------*/
+
+#index main section:nth-child(5) { /*Min femte section i Index main*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Centrerar innehållet i sectionen till mitten*/
+    background-color: #afafaf;
+    padding: 20px; /*Gör så mina element hamnar lite längre ner*/
+    font-family: "Sedan SC", serif; /*Använder en font som jag länkat från en sida*/
 }
 
-input:valid {
-    border-color: green;
+form { /*Mitt formulär*/
+    width: fit-content;
+    display: flex; /*Sätter en flexible layout så att jag kan göra så att allt innehåll placeras i en viss stil, eller ordning*/
+    flex-direction: column; /*Gör så min flexible layout placeras vertikalt, så alla objekt hamnar vertikalt från varandra, ger mitt formulär ording*/
+    gap: 10px; /*Skapar ett mellanrum mellan mina rader och kolumner på 10 pixlar*/
 }
 
-input {
+input:invalid { /*När min input är invalid*/
+    border-color: red; /*Ändrar min ram färg till röd*/
+}
+
+input:valid { /*När min input är valid*/
+    border-color: green; /*Ändrar ram färgen till grön*/
+}
+
+input {  
     width: 300px;
-    padding: 12px 20px;
+    padding: 12px 20px; /*Ger en padding på 12 pixlar på toppen och botten och 20 pixlar på sidorna*/
     margin: 1px;
     border-radius: 4px;
 }
 
-#index button {
-    width: 45ch;
+#index button { /*Min button i index*/
+    width: 45ch; /*Sätter en bredd på 45 ch, ch är bredden på siffran 0 i det aktuella typsnittet/storleken*/
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    border: none;
+    padding: 14px 20px; /*Gör knappen tjockare*/
+    border: none; /*Tar bort border*/
     border-radius: 4px;
-    cursor: pointer;
+    cursor: pointer; /*Ändrar musutseende när man håller över den*/
     margin: auto;
 }
 
-input[type="checkbox"] {
-    display: none;
+input[type="checkbox"] { /*Ändrar alla inputs som är typen checkbox*/
+    display: none; /*Tar bort orginal checkboxen, detta gör jag för att skappa min egna checkbox*/
 }
 
-input[type="checkbox"] + label {
-    display: inline-block;
+input[type="checkbox"] + label { /*Skapar min egna checkbox*/
+    display: inline-block; 
     vertical-align: middle;
     position: relative;
     padding-left: 30px;
@@ -191,7 +201,6 @@ input[type="checkbox"] + label:after {
     top: 1px;
     font-size: 16px; 
     color: #fff; 
-    visibility: hidden;
 }
 
 input[type=radio] {
@@ -201,6 +210,8 @@ input[type=radio] {
 #numbers {
     width: 20em;
 }
+
+/*--------------------------------------------------------------------------------------------------------*/
 
 header ~ nav {
     grid-area: nav;
@@ -285,17 +296,6 @@ header + nav:hover section, header + nav:focus-within section {
 #index main > section:nth-child(4) {
     background-color: rgb(0, 217, 255);
     padding-bottom: 1px;
-}
-
-#index main section:nth-child(5) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    background-color: #afafaf;
-    padding: 20px;
-    margin: auto;
-    font-family: "Sedan SC", serif;
 }
 
 #index main section:nth-child(4) > ol {
@@ -471,7 +471,7 @@ iframe {
 
 @font-face { /*Gör så jag kan implementera en font utanför html's bibliotek*/
     font-family: minfont; /*Döper min font*/
-    src: url(/Fonts/Jaro-Regular-VariableFont_opsz.ttf); /*Länkar fonten*/
+    src: url(/fonts/font.ttf); /*Länkar fonten*/
 }
 
 @media screen and (min-width: 600px) {
