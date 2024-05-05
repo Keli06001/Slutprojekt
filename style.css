@@ -37,6 +37,20 @@ footer p { /*Ändrar alla p element i min footer, p är min huvudtext*/
     margin-bottom: 2px; /*skapar ett avstånd på 2px under min text*/
 }
 
+.ovanlig, .vanlig, .home { /*Ändrar färg på de valda klasserna, detta använde jag för att byta färg på navigations sidans text som man är på*/
+    color:white;
+}
+
+h1 { /*Stylar alla h1*/
+    display: none; /*Gör så att min h1 inte visas*/
+}
+
+img { /*Stylar alla img*/
+    border-radius: 20px; /*Rundar hörnen på alla mina img med en radius på 20 pixlar*/
+}
+
+/*--------------------------------------------Navigation--------------------------------------------*/
+
 header > nav ul { /*Redigerar för oordnade listor (ul) som är i navigationsmenyn (nav) direkt inom sidhuvudet (header)*/
     font-family: minfont; /*Använder fontent minfont som jag har laddat ner från google fonts*/
     height: fit-content; /*Sätter höjden så att den anpassar sig för att få plats med allt inehåll, i detta fall allting i min navigationsmeny (nav)*/
@@ -73,53 +87,204 @@ header > nav li:nth-child(3) {
     margin: auto;
 }
 
-h1 { /*Stylar alla h1*/
-    display: none; /*Gör så att min h1 inte visas*/
+/*---------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------Index-------------------------------------*/
+
+#index main section:nth-child(1) { /*Backgrundsbild*/
+    height: 40vh; 
+    background-image: url(/src/sport.jpg); /*Skapar en bild som hamnar i index main första section*/
+    background-size: cover; /*Gör att bilden tecker hela sectionen, så den klipper eller scalar bilden för att uppnå detta*/
+    background-position: center; /*Centrerar bilden*/
 }
 
-img { /*Stylar alla img*/
-    border-radius: 20px; /*Rundar hörnen på alla mina img med en radius på 20 pixlar*/
+#index main > section:nth-child(2) { /*Information 1, historia*/
+    display: flex; 
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem; /*rem är rotelementets typsnitt, alltså kommer texten vara 1 och en halvgånger så stor*/
+    padding: 20px;
+    background-color: rgb(220, 195, 141);
 }
 
-.ovanlig, .vanlig, .home { /*Ändrar färg på de valda klasserna, detta använde jag för att byta färg på navigations sidans text som man är på*/
-    color:white;
+#index main > section:nth-child(3) {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 20px;
+    background-color: rgb(162, 228, 227);
 }
 
-.sport table { /*Min tabell inom klassen sport*/
-    margin-left: auto; /*Margin auto åt vänster*/
-    margin-right: auto; /*Margin auto åt höger, centrerar table åt vänster höger utan att påvärka upp och ner*/
-    margin-bottom: 12px;
-    width: 90%; /*Ändrar bredden till 90% av hela sidan bredd*/
-    border: solid black; /*Skapar en ram runt som är svart*/
-    border-collapse: collapse; /*Gränserna kollapsar ihop till en enda gräns mellan cellerna. Detta gör tabellen renare*/
+#index main a:nth-child(6) { /*Skapar en flex till arean där jag har min tillbaka till toppen pil*/
+    display: flex;
+    background-color: #afafaf;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2px;
+    text-decoration: none;
 }
 
-.sport th, 
-.sport td { /*Stylar för th inom klassen sport och td inom klassen sport*/
-    text-align: left; /*Gör att texten centreras åt vänster*/
-    font-size: 30px;
+#index main a:nth-child(6)::before { /*Skapar en bil som kommer innan elementet*/
+    content: '↑';
+    font-size: 72px;
 }
 
-.sport tr:nth-child(even) { /*Ändrar alla jämna tr inom sport. Det finns en 1 en 2 och så vidare tills så många jag har, alltså ändrar den alla med jämna nummer som 2,4 och så*/
-    background-color: #135f69; /*Ger mig zebra striping*/
+#topp:target { /*Gör at att när jag går till target med hjälp av länken så ändras backgrundfärgen på min ul i index*/
+    background-color: #738ea3;
 }
 
-.sport caption { /*Väljer min caption inom sport*/
-    font-size: 30px;
+#index main > section:nth-child(2) h2 {  /*h2 i min andra section direkt i index main*/
+    width: 100%;
+    margin: 0;
+}
+
+#index main > section:nth-child(2) > section { /*Section som ligger direkt i min andra section direkt i index main*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#index main > section:nth-child(3) > section { /*Section som ligger direkt i min tredje section direkt i index main*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#index main > section:nth-child(4) {
+    background-color: rgb(0, 217, 255);
+    padding-bottom: 1px;
+}
+
+#index main section:nth-child(4) > ol {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#index main section:nth-child(4) li {
+    margin-top: 12px;
+    font-size: 25px;
+}
+
+#index main section:nth-child(2) img {
+    width: 70%;
+}
+
+#index main section:nth-child(3) img {
+    width: 90%;
+}
+
+#index main h4 {
+    padding-top: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------Vanliga/Ovanliga Sporter------------------------------------*/
+
+#vanliga h2, 
+#ovanliga h2 {
+    margin: 0;
+    font-size: 4ex; /*ex är höjden av litet x i det typsnittet*/
+    text-align: center;
+    background-image: linear-gradient(turquoise, rgb(156, 156, 156)); /*Gör en gradient mellan två olika färger*/
+}
+
+#vanliga main p, 
+#ovanliga main p {
+    margin: 2px;
+    text-align: center;
+}
+
+#vanliga main a,
+#ovanliga main a {
     margin-bottom: 2px;
 }
 
-.sport dl { /*Min definition list i sport*/
-    background-color: #2196F3;
-    width: fit-content; /*Ändrar breden för att få plats med allt inehåll*/
-    border-radius: 12px; /*Rundar hörnen med en cirkel radie på 12 pixlar*/
-    margin-left: auto;
-    margin-right: auto;
+#vanliga main section, 
+#ovanliga main section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
 }
 
-figure { 
-    margin: 0;
+#vanliga main section h3,
+#vanliga main section h4,
+#vanliga main section h5,
+#ovanliga main section h3,
+#ovanliga main section h4,
+#ovanliga main section h5,
+#ovanliga main section h6 {
+    font-size: 25px;
+    margin-top: 28px;
+    margin-bottom: 3px;
 }
+
+#vanliga main section img,
+#ovanliga main section img {
+    padding-top: 12px;
+    width: 80%;
+}
+
+#vanliga main section:nth-child(1) {
+    background-color: hsl(61, 87%, 49%);
+}
+
+#vanliga main section:nth-child(2) {
+    background-color: #9eb565;
+}
+
+#vanliga main section:nth-child(3) {
+    background-color: white;
+}
+
+#vanliga main section:nth-child(4) {
+    background-color: #f5f6fa;
+}
+
+#ovanliga main section:nth-child(2) {
+    background-color: #637dc5;
+}
+
+#ovanliga main section:nth-child(3) {
+    background-color: #c03c43;
+}
+
+#ovanliga main section:nth-child(4) {
+    background-color: #8f857a;
+}
+
+#ovanliga main section:nth-child(5) {
+    background-color: hsl(58.15deg 98.78% 67.84%);
+}
+
+#vanliga main {
+    background-color: #4f81ce;
+}
+
+#vanliga video { /*Video som är i vanliga sporter*/
+    width: 98vw;
+    display: block; /*Gör så att elementet hanteras som om de vore ett block*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+/*----------------------------------------------------------------------------------------------------*/
 
 /*------------------------------------------------Formulär------------------------------------------------*/
 
@@ -220,23 +385,23 @@ header ~ nav { /*Väljer alla nav som är syskon till header*/
 } 
 
 header + nav section { 
-    position: absolute;
-    height: min-content; /*Min content sätter höjden på ett element till det minsta möjliga värdet som tillåter att allt innehåll inuti elementet visas utan att behöva skrolla*/
     width: 100%;
     top: 100%;
+    height: min-content; /*Min content sätter höjden på ett element till det minsta möjliga värdet som tillåter att allt innehåll inuti elementet visas utan att behöva skrolla*/
+    position: absolute;
     box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .5); /*Sättter en skugga runt elementet*/
     opacity: 0; /*gör elementet osynligt för att sedan kunna animera elementet till synligt*/
     pointer-events: none; /*Elementet kommer inte att fånga eller svara på några pekarevenemang, vilket gör att händelserna (faller igenom) till element under det*/
-    transform: translateY(-10px); /*Skapar en animation, gör att elementet flyttas uppåt*/
-    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out; /*Gör en mjuk övergång mellan de två olika tillstånden*/
+    transform: translateY(-12px); /*Skapar en animation, gör att elementet flyttas uppåt*/
+    transition: opacity 175ms ease-in-out, transform 175ms ease-in-out; /*Gör en mjuk övergång mellan de två olika tillstånden*/
 } 
 
-header + nav:hover section, header + nav:focus-within section { /**/
-    opacity: 1;
-    height: 23vh;
-    background-color: rgba(194, 97, 56, 0.877);
-    transform: translateY(0);
-    pointer-events: auto;
+header + nav:hover section, header + nav:focus-within section { /*Gör att animationen startar vid hover eller focus, focus är när du tabbar på elementet*/
+    opacity: 1; /*Gör elementet synligt igen när man hoverar eller focusar*/
+    height: 23vh; /*Sätter höjden till 23 viewport height vilket är 23% av höjden på skärmen*/
+    background-color: rgba(194, 97, 56, 0.877); /*Sätter backgrundsfärg på delen som popar up*/
+    transform: translateY(0); /*Transformera elementet vertikalt till dess ursprungliga position.*/
+    pointer-events: auto; /*Det gör att jag kan interaktera med den normalt också och inte bara genom hover och focus*/
 } 
 
 #ovanliga button { /*Gör så att knappen täcker hela navbaren*/
@@ -246,180 +411,7 @@ header + nav:hover section, header + nav:focus-within section { /**/
 
 /*--------------------------------------------------------------------------------------------------------*/
 
-#index main section:nth-child(1) {
-    height: 40vh;
-    background-image: url(/src/sport.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-#index main > section:nth-child(2) {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 20px;
-    background-color: rgb(220, 195, 141);
-}
-
-#index main > section:nth-child(3) {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
-    padding: 20px;
-    background-color: rgb(162, 228, 227);
-}
-
-#index main > section:nth-child(2) h2 {
-    width: 100%;
-    margin: 0;
-}
-
-#index main > section:nth-child(2) > section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#index main > section:nth-child(3) > section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#index main > section:nth-child(4) {
-    background-color: rgb(0, 217, 255);
-    padding-bottom: 1px;
-}
-
-#index main section:nth-child(4) > ol {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-#index main section:nth-child(4) li {
-    margin-top: 12px;
-    font-size: 25px;
-}
-
-#index main section:nth-child(2) img {
-    width: 70%;
-}
-
-#index main section:nth-child(3) img {
-    width: 90%;
-}
-
-#index main h2 {
-    width: 44vw;
-}
-
-#index main h4 {
-    padding-top: 12px;
-    text-align: center;
-    margin: 0;
-}
-
-#vanliga h2, 
-#ovanliga h2 {
-    margin: 0;
-    font-size: 4ex;
-    text-align: center;
-    background-image: linear-gradient(turquoise, rgb(156, 156, 156));
-}
-
-#vanliga main p, 
-#ovanliga main p {
-    margin: 2px;
-    text-align: center;
-}
-
-#vanliga main a,
-#ovanliga main a {
-    margin-bottom: 2px;
-}
-
-#vanliga main section, 
-#ovanliga main section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 24px;
-}
-
-#vanliga main section h3,
-#vanliga main section h4,
-#vanliga main section h5,
-#ovanliga main section h3,
-#ovanliga main section h4,
-#ovanliga main section h5,
-#ovanliga main section h6 {
-    font-size: 25px;
-    margin-top: 28px;
-    margin-bottom: 3px;
-}
-
-#vanliga main section:nth-child(1) {
-    background-color: hsl(61, 87%, 49%);
-}
-
-#ovanliga main section:nth-child(2) {
-    background-color: #637dc5;
-}
-
-#vanliga main section:nth-child(2) {
-    background-color: #9eb565;
-}
-
-#vanliga main section:nth-child(3) {
-    background-color: white;
-}
-
-#ovanliga main section:nth-child(3) {
-    background-color: #c03c43;
-}
-
-#vanliga main section:nth-child(4) {
-    background-color: #f5f6fa;
-}
-
-#ovanliga main section:nth-child(4) {
-    background-color: #8f857a;
-}
-
-#ovanliga main section:nth-child(5) {
-    background-color: hsl(58.15deg 98.78% 67.84%);
-}
-
-#vanliga main section img,
-#ovanliga main section img {
-    padding-top: 12px;
-    width: 80%;
-}
-
-#vanliga main {
-    background-color: #4f81ce;
-}
-
-#vanliga video {
-    width: 98vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 15px;
-}
+/*--------------------------------------------Sport--------------------------------------------*/
 
 .sport main h2 {
     text-align: center;
@@ -448,28 +440,49 @@ header + nav:hover section, header + nav:focus-within section { /**/
     background-color: #738ea3;
 }
 
-iframe {
+.sport table { /*Min tabell inom klassen sport*/
+    margin-left: auto; /*Margin auto åt vänster*/
+    margin-right: auto; /*Margin auto åt höger, centrerar table åt vänster höger utan att påvärka upp och ner*/
+    margin-bottom: 12px;
+    width: 90%; /*Ändrar bredden till 90% av hela sidan bredd*/
+    border: solid black; /*Skapar en ram runt som är svart*/
+    border-collapse: collapse; /*Gränserna kollapsar ihop till en enda gräns mellan cellerna. Detta gör tabellen renare*/
+}
+
+.sport th, 
+.sport td { /*Stylar för th och td inom klassen sport*/
+    text-align: left; /*Gör att texten centreras åt vänster*/
+    font-size: 30px;
+}
+
+.sport tr:nth-child(even) { /*Ändrar alla jämna tr inom sport. Det finns en 1 en 2 och så vidare tills så många jag har, alltså ändrar den alla med jämna nummer som 2,4 och så*/
+    background-color: #135f69; /*Ger mig zebra striping*/
+}
+
+.sport caption { /*Min tabellrubrik*/
+    font-size: 30px;
+    margin-bottom: 2px;
+}
+
+.sport dl { /*Min definition list i sport*/
+    background-color: #2196F3;
+    width: fit-content; /*Ändrar breden för att få plats med allt inehåll*/
+    border-radius: 12px; /*Rundar hörnen med en cirkel radie på 12 pixlar*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sport figure { /*Min bild på Bossaball*/
+    margin: 0;
+}
+
+.sport iframe { /*YouTube video*/
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#index main a:nth-child(6) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2px;
-    text-decoration: none;
-}
-
-#index main a:nth-child(6)::before {
-    content: '↑';
-    font-size: 72px;
-}
-
-#topp:target {
-    background-color: #738ea3;
-}
+/*-------------------------------------------------------------------------------------------*/
 
 @font-face { /*Gör så jag kan implementera en font utanför html's bibliotek*/
     font-family: minfont; /*Döper min font*/
@@ -477,7 +490,7 @@ iframe {
 }
 
 @media screen and (min-width: 600px) { /*Media queries, gör så att vissa saker ändras när skärmupplösningens bredd passerar 600px*/
-    nav a {
+    nav a { /*Ändrar min nav när bredden på användarens skärm passerar 600px*/
         display: block;
         border-radius: 4px;
         text-align: center;
@@ -485,25 +498,29 @@ iframe {
         font-size: 3.3vh;
     }
 
-    a:link {
+    /*------LoVe Focus HAte------*/
+
+    a:link { /*Alla länkar*/
         text-decoration: inherit;
     }
     
-    a:visited {
+    a:visited { /*Länkar som användaren har besökt*/
         text-decoration: inherit;
     }
     
-    nav a:focus, nav a:hover {
+    nav a:focus, nav a:hover { /*Focus är när man tabbar på elementet, Hover är när man håller musen över elementet*/
         border: 1px solid black;
-        font-size: larger;
+        font-size: larger; /*Gör texten lite större än förälderns storlek, vilket är lite mindre än storleken som jag har på naven*/
         background-color: rgba(194, 97, 56, 0.719)
     }
 
-    a:active {
+    a:active { /*När man klickar på elementet*/
         text-decoration: inherit;
     }
 
-    #index main section:nth-child(1) {
+    /*-------------------------------*/
+
+    #index main section:nth-child(1) { /*Ändrar min backgrundsbild eftersom förra blev dålig på bredare skärmar*/
         background-image: url(/src/sport1.jpg);
     }
 
@@ -528,7 +545,7 @@ iframe {
         width: 100%;
     }
     
-    #index main > section:nth-child(2) {
+    #index main > section:nth-child(2) { /*Ändrar layouten från column till row*/
         flex-direction: row;
     }
 
@@ -536,7 +553,7 @@ iframe {
         width: 30%;
     }
 
-    #index main > section:nth-child(3) {
+    #index main > section:nth-child(3) { /*Ändrar till row-reversed, alltså tvärtom layouten över*/
         flex-direction: row-reverse;
     }
 
@@ -549,7 +566,7 @@ iframe {
         flex-direction: row;
     }
 
-    #vanliga .trespalt {
+    #vanliga .trespalt { /*Gör att jag kan ha trespaltslayout på några av elementen utan att påvärka vissa andra*/
         display: flex;
         flex-direction: row;
     }
