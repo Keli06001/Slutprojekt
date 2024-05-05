@@ -20,21 +20,27 @@ main {
     grid-area: main;
 }
 
-
 footer {
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #4e4e4e;
     background-color: rgb(240, 240, 240);
     grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 footer a {
     text-decoration: none;
 }
 
+footer p {
+    margin-bottom: 2px;
+}
+
 header > nav ul {
-    height: 60px;
+    font-family: minfont;
+    height: fit-content;
     margin-top: 0;
     margin-bottom: 0;
     background-color: #F4743B;
@@ -77,10 +83,6 @@ h1 {
 
 img {
     border-radius: 20px;
-}
-
-#vanliga h1 {
-    display: block;
 }
 
 .ovanlig, .vanlig, .home {
@@ -293,6 +295,7 @@ header + nav:hover section, header + nav:focus-within section {
     background-color: #afafaf;
     padding: 20px;
     margin: auto;
+    font-family: "Sedan SC", serif;
 }
 
 #index main section:nth-child(4) > ol {
@@ -326,12 +329,12 @@ header + nav:hover section, header + nav:focus-within section {
     margin: 0;
 }
 
-#vanliga h1, 
+#vanliga h2, 
 #ovanliga h2 {
     margin: 0;
     font-size: 4ex;
     text-align: center;
-    background-color: turquoise;
+    background-image: linear-gradient(turquoise, rgb(156, 156, 156));
 }
 
 #vanliga main p, 
@@ -377,6 +380,10 @@ header + nav:hover section, header + nav:focus-within section {
     background-color: #9eb565;
 }
 
+#vanliga main section:nth-child(3) {
+    background-color: white;
+}
+
 #ovanliga main section:nth-child(3) {
     background-color: #c03c43;
 }
@@ -399,6 +406,19 @@ header + nav:hover section, header + nav:focus-within section {
     width: 80%;
 }
 
+#vanliga main {
+    background-color: #4f81ce;
+}
+
+#vanliga video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
 .sport main h2 {
     text-align: center;
 }
@@ -416,7 +436,7 @@ header + nav:hover section, header + nav:focus-within section {
     width: 80%;
 }
 
-.sport section:nth-child(2) {
+.sport main section:nth-child(2) {
     background-color: #fdffde;
     text-align: center;
     margin-bottom: 0;
@@ -449,17 +469,18 @@ iframe {
     background-color: #738ea3;
 }
 
-@media (min-width: 600px) {
+@font-face { /*Gör så jag kan implementera en font utanför html's bibliotek*/
+    font-family: minfont; /*Döper min font*/
+    src: url(/Fonts/Jaro-Regular-VariableFont_opsz.ttf); /*Länkar fonten*/
+}
+
+@media screen and (min-width: 600px) {
     nav a {
         display: block;
         border-radius: 4px;
         text-align: center;
         padding: 2px 3px;
         font-size: 3.3vh;
-    }
-
-    nav ul {
-        height: 40px;
     }
 
     a:link {
@@ -471,6 +492,7 @@ iframe {
     }
     
     nav a:focus, nav a:hover {
+        border: 1px solid black;
         font-size: larger;
         background-color: rgba(194, 97, 56, 0.719)
     }
@@ -487,12 +509,12 @@ iframe {
         padding-right: 40vw;
     }
 
-    .sport section:nth-child(2) {
+    .sport main section:nth-child(2) {
         display: flex;
         flex-direction: row;
     }
 
-    .sport section:nth-child(2) p {
+    .sport main section:nth-child(2) p {
         margin: auto;
     }
 
@@ -520,7 +542,7 @@ iframe {
         width: 60%;
     }
 
-    #vanliga main {
+    #vanliga .trespalt {
         display: flex;
         flex-direction: row;
     }
