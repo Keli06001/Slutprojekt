@@ -480,6 +480,8 @@ header + nav:hover section, header + nav:focus-within section { /*Gör att anima
     display: block;
     margin-left: auto;
     margin-right: auto;
+    width: 420;
+    height: 345;
 }
 
 /*-------------------------------------------------------------------------------------------*/
