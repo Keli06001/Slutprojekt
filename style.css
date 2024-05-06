@@ -480,8 +480,8 @@ header + nav:hover section, header + nav:focus-within section { /*Gör att anima
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 420;
-    height: 345;
+    width: 100%;
+    height: 345px;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -541,10 +541,6 @@ header + nav:hover section, header + nav:focus-within section { /*Gör att anima
 
     .sport section:nth-child(3) p {
         margin-top: 2vh;
-    }
-
-    iframe {
-        width: 100%;
     }
     
     #index main > section:nth-child(2) { /*Ändrar layouten från column till row*/
