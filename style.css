@@ -5,6 +5,7 @@
         "nav"
         "main"
         "footer";
+    width: 100%;
 } /*Sluttag, visar att här slutar redigeringen av wrapper*/
 
 body { /*Ändrar body på sidan, jag använder det för att nollställa min margin för min body eftersom den har en defult margin på 8px*/
@@ -77,7 +78,8 @@ header > nav li:nth-child(1) { /*Mitt första li element i nav som ligger direkt
     margin-bottom: auto; /*Gör samma sak fast under, använder detta för att centrera mitt objekt i höjden utan att påvärka sidorna*/
 }
 
-header > nav li:nth-child(3) {
+header > nav li:nth-child(3),
+header > nav li:nth-child(2) {
     margin: auto;
 }
 
@@ -499,7 +501,7 @@ header + nav:hover section, header + nav:focus-within section { /*Gör att anima
         border-radius: 4px;
         text-align: center;
         padding: 2px 3px;
-        font-size: 3.3vh;
+        font-size: 3.8vh;
     }
 
     /*------LoVe Focus HAte------*/
