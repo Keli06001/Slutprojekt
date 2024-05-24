@@ -59,7 +59,7 @@ header > nav ul { /*Redigerar för oordnade listor (ul) som är i navigationsmen
     background-color: #F4743B; 
     display: grid;
     grid-area: nav;
-    grid-template-columns: 1fr 1fr 1fr 1fr; /*Delar upp min grid till 4 horizontella delar vart alla är storleken 1fr (fraktion) så alltså 4 lika stora delar*/
+    grid-template-columns: 2fr 1fr 1fr; /*Delar upp min grid till 4 horizontella delar vart alla är storleken 1fr (fraktion) så alltså 4 lika stora delar*/
 }
 
 nav li { /*Mina listor i min nav*/
@@ -67,20 +67,14 @@ nav li { /*Mina listor i min nav*/
 }
 
 nav a {
-    font-size: 24px; /*Sätter storleken på alla a i nav till 24 pixlar*/
+    font-size: 24px;/*Sätter storleken på alla a i nav till 24 pixlar*/
     text-decoration: none;
     color: #312e30;
 }
 
 header > nav li:nth-child(1) { /*Mitt första li element i nav som ligger direkt i header*/
-    padding-right: 25.5vw; /*Sätter ett avstånd till höger med 25,5 viewport width, vilket motsvarar 25,5% av enhetens bredd*/
     margin-top: auto; /*Gör att mitt avstånd över ändras aoutomatiskt*/
     margin-bottom: auto; /*Gör samma sak fast under, använder detta för att centrera mitt objekt i höjden utan att påvärka sidorna*/
-}
-
-header > nav li:nth-child(2) { /*Ändrar andra li elementet i nav som ligger direkt i header*/
-    padding-right: 26px; /*Lägger till en padding åt höger för att ge mer avstånd mellan knapparna*/
-    margin: auto; /*Centrerar li elementet på alla håll*/
 }
 
 header > nav li:nth-child(3) {
