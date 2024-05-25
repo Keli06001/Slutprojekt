@@ -11,68 +11,92 @@
 <body class="sport"> <!--Har sättit en class här eftersom man kan ha samma klass på flera olika element och jag vill att denna sidan ska vara lik många andra sidor på min sida. Så sättit samma class på deras body också-->
     <div class="wrapper">
 
-    <header role="banner">
-        <h1>Schackboxning</h1>
+        <header role="banner">
+            <h1>Schackboxning</h1>
+            <nav role="navigation">
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="vanliga.html">Vanliga Sporter</a>
+                    </li>
+                    <li>
+                        <a class="ovanlig" href="ovanliga.html">Ovanliga Sporter</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-        <nav role="navigation">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="vanliga.html">Vanliga Sporter</a></li>
-                <li><a class="ovanlig" href="ovanliga.html">Ovanliga Sporter</a></li>
-            </ul>
+        <nav role="navigation"> 
+            <button>&#9776; Toggle Navbar</button> 
+            <section>
+                <ul>
+                    <li>
+                        <a href="bossaball.html">Bossaball</a>
+                    </li>
+                    <li>
+                        <a href="cykelboll.html">Cykelboll</a>
+                    </li>
+                    <li>
+                        <a href="quidditch.html">Quidditch</a>
+                    </li>
+                    <li>
+                        <a href="schackboxning.html">Schackboxning</a>
+                    </li>
+                </ul>
+            </section>
         </nav>
 
-    </header>
+        <main role="main">
+            <h2>SCHACKBOXNING</h2>
 
-    <main role="main">
-        <h2>SCHACKBOXNING</h2>
+            <section>
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> <!--En YouTube video som jag länkat med iframe-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </section>
 
-        <section>
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> <!--En YouTube video som jag länkat med iframe-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </section>
+            <section>
+                <img src="../src/muppet.jpg" alt="placeholder">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </section>
 
-        <section>
-            <img src="../src/muppet.jpg" alt="placeholder">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </section>
-
-        <section>
-            <table> <!--En tabell-->
-                <tr> <!--tr definerar tabellens rader, denna tabellen har 4 rader-->
-                    <th>1</th> <!--Här har jag mina huvudceller vilket jag använder för att beskriva mina td-->
-                    <th>2</th>
-                    <th>3</th>
-                </tr>
-                <tr>
-                    <td>bababoy</td> <!--Här är mina vanliga celler med information-->
-                    <td>bababoy</td>
-                    <td>bababoy</td>
-                </tr>
-                <tr>
-                    <td>bababoy</td>
-                    <td>bababoy</td>
-                    <td>bababoy</td>
-                </tr>
-                <tr>
-                    <td>bababoy</td>
-                    <td>bababoy</td>
-                    <td>bababoy</td>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <footer role="contentinfo">
-        <section>
-            <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
-                <path d="M4 14.7519C3.37037 13.8768 3 12.8059 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 13.5693 20.6254 14.5541 20 15.3275M12.5 12.9995L10.5 21.0008M8.5 11.9995L6.5 20.0008M16.5 12L14.5 20.0013" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </section>
-        <section>
-            <p>Källor: </p>
-            <a href="https://news.topsport.com.au/ranked-the-worlds-most-popular-sports/">TopSport.com</a>
-        </section>
-    </footer>
+            <section>
+                <table> <!--En tabell-->
+                    <tr> <!--tr definerar tabellens rader, denna tabellen har 4 rader-->
+                        <th>1</th> <!--Här har jag mina huvudceller vilket jag använder för att beskriva mina td-->
+                        <th>2</th>
+                        <th>3</th>
+                    </tr>
+                    <tr>
+                        <td>bababoy</td> <!--Här är mina vanliga celler med information-->
+                        <td>bababoy</td>
+                        <td>bababoy</td>
+                    </tr>
+                    <tr>
+                        <td>bababoy</td>
+                        <td>bababoy</td>
+                        <td>bababoy</td>
+                    </tr>
+                    <tr>
+                        <td>bababoy</td>
+                        <td>bababoy</td>
+                        <td>bababoy</td>
+                    </tr>
+                </table>
+            </section>
+        </main>
+        <footer role="contentinfo">
+            <section>
+                <svg xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 14.7519C3.37037 13.8768 3 12.8059 3 11.6493C3 9.20008 4.8 6.9375 7.5 6.5C8.34694 4.48637 10.3514 3 12.6893 3C15.684 3 18.1317 5.32251 18.3 8.25C19.8893 8.94488 21 10.6503 21 12.4969C21 13.5693 20.6254 14.5541 20 15.3275M12.5 12.9995L10.5 21.0008M8.5 11.9995L6.5 20.0008M16.5 12L14.5 20.0013" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </section>
+            <section>
+                <p>Källor: </p>
+                <a href="https://news.topsport.com.au/ranked-the-worlds-most-popular-sports/">TopSport.com</a>
+            </section>
+        </footer>
     </div>
 </body>
 </html>
